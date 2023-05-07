@@ -1,4 +1,7 @@
+import operator
+
 # define a function for performing the calculations
+def calculate():
 
         # ask the user for two numbers and an operation
         
