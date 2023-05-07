@@ -28,3 +28,9 @@ def calculate():
         print("Cannot divide by zero")
 
 # repeatedly ask the user to perform calculations
+while True:
+    calculate() # call the calculate function
+    choice = input("Do you want to try again? (y/n): ")
+    if choice.lower() == "n":
+        print("Thank you!")
+        break
