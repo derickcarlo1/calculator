@@ -1,4 +1,6 @@
 import operator
+from termcolor import colored
+import pyfiglet
 
 # define a function for performing the calculations
 def calculate():
@@ -19,12 +21,15 @@ def calculate():
             result = operator.truediv(num1, num2)
 
         # print the result of the calculation
-        print("Result", result)
+        print(colored(pyfiglet.figlet_format("Result"), color="green"))
+        print(colored(f"{result:.2f}", color="green"))
     except ValueError:
         # handle errors when the user enters invalid input
+        print(colored(pyfiglet.figlet_format("Error"), color="red"))
         print("Please enter valid numbers")
     except ZeroDivisionError:
         # handle errors when the user tries to divide by zero
+        print(colored(pyfiglet.figlet_format("Error"), color="red"))
         print("Cannot divide by zero")
 
 # repeatedly ask the user to perform calculations
@@ -32,5 +37,8 @@ while True:
     calculate() # call the calculate function
     choice = input("Do you want to try again? (y/n): ")
     if choice.lower() == "n":
-        print("Thank you!")
+        print(colored(pyfiglet.figlet_format("Thank you!"), color="blue"))
         break
+    elif choice.lower() != "y":  # added an error if the user inputs something other than y or n
+        print(colored(pyfiglet.figlet_format("Error"), color="red"))
+        print("Invalid input. Please enter either 'y' or 'n'")
