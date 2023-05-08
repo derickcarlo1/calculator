@@ -29,6 +29,23 @@ This will start the program and display a prompt asking you to enter the first n
 
 After each calculation, the program will ask if you want to try again or not. If you choose not to try again, the program will exit.
 
+# Note
+Note that:
+
+If VS Code is not recognizing the termcolor module, it could be because the module is not installed in the Python environment that you are using with VS Code.
+
+To check if termcolor is installed, you can open a terminal or command prompt and run the following command:
+
+sql
+
+pip show termcolor
+
+If termcolor is not installed, you can install it by running the following command:
+
+pip install termcolor
+
+Once the module is installed, you should be able to import it in your Python code as usual. If you are still having issues with VS Code recognizing the termcolor module after installing it, you may need to check your VS Code configuration and ensure that it is using the correct Python environment.
+
 # Why Use This Program?
 This program is a useful tool for anyone who needs to perform simple arithmetic calculations quickly and easily. It is especially useful for students and professionals who work with numbers regularly, such as engineers, accountants, and scientists.
 By using this program, you can save time and avoid making errors when performing calculations manually. Plus, the program provides a user-friendly interface that makes it easy to enter and view your calculations.
